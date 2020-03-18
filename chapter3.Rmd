@@ -1,13 +1,15 @@
 ---
-title: '20200311'
+title: "chapter 3"
 author: "niki"
-date: "2020/3/11"
+date: "2020/3/18"
 output: html_document
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+```{r}
+
 
 ## R Markdown
 
