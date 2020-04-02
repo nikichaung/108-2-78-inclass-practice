@@ -8,18 +8,195 @@ output: html_document
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
+
+
+ObjectName <- object_value
+
+
+
 ```{r}
+library(googlesheets4)
+ObjectName <-
+  'object_value'
+a<-2
+```
+
+```{r}
+library(googlesheets4)
+ObjectName <- 'object_value'
+3->B
+```
+```{r}
+library(googlesheets4)
+ObjectName <- 'object_value'
+'我的學期成績'<-100
+```
+
+
+```{r}
+A<-10
+B<-A
+```
+
+```{r}
+num1 <- 5
+num2 <- c(5)
+```
+```{r}
+vNum1 <- c(-1,5)
+vNum2 <- c(2,3)
+vNum4 <- c() # 空向量
+vNum3 <- c(vNum2, vNum1)
+vNum4 <- c(vNum4, vNum1) # 向量疊代 （recursive vector concatenate）
+
+```
+```{r}
+library(httr)
+library(dplyr)
+GET("https://github.com/nikichaung/108-2-78-inclass-practice"
+  ) %>%
+  content() %>%
+  View()
+```
+
+```{r}
+library(googlesheets4)
+`出席狀況表單網址` <-  # 缺乏定義值
+ss <-'as_sheets_id(`https://docs.google.com/spreadsheets/d/1oB-5hj1pO5g8FMpZbA7RgIG8NvCRx6WvLPwvleCEV4Q/edit`)
+homework_sheet <- sheets_read(ss,sheet=1)
+```
+```{r}
+logi1 <- c(T,TRUE,F,FALSE,FALSE)
+# 加總向量內的所有元素值。
+# 加總向量內的所有元素值。
+
+```
+
+```{r}
+num <- c(1.5, 2, 3)
+int <- c(1L, 3L, -2L)
+char <- c("1.5","2","3")
+logi <- c(T,T,F)
+
+typeof(num)
+typeof(int)
+typeof(char)
+typeof(logi)
+```
+```{r}
+majors10_factor <- factor(
+  c('經濟學系','社會學系','社會學系','經濟學系','經濟學系','社會學系','經濟學系','經濟學系','經濟學系','社會學系')
+)
+
+typeof(majors10_factor)
+class(majors10_factor)
+
+```
+```{r}
+levels(majors10_factor)
+```
+```{r}
+stringInteger <- c("1","2","-11")
+class(stringInteger) # 無法進行數值運算
+as.integer(stringInteger)
+class(stringInteger)
+
+```
+```{r}
+studentId <- c(410773002, 410773015)
+studentId<-as.character(studentId)
+```
+台北 2020-03-18 13:52:40
+```{r}
+library(lubridate)
+tpeTime <- ymd_hms("2020-03-18 13:52:40",
+        tz="Asia/Taipei")
+```
+葡萄牙 Mar.18, 2020, 05:52:40
+```{r}
+pgTime <- mdy_hms("Mar.18, 2020, 05:52:40",
+                  tz="Europe/Lisbon")
+```
+```{r}
+
+tpeTime <- c(`2020-03-04T08:15:28Z`,`2020-03-11 16:06:52`,
+             "2020-03-11 16:06:52")
+tpeTime <- 
+  ymd_hms(
+    tpeTime, # 呼叫tpeTime向量值
+    tz="Asia/Taipei"
+    )
+```
 
 
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+When you click the **Knit** button a document
+will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
 
 ```{r cars}
 summary(cars)
 ```
+
+
+```{r}
+library(lubridate)
+#今（“2020-03-31”）明（“2020-04-01”）「台北市」氣溫最高25度，最低18度；「新北市」氣溫最高24度，最低15度。
+
+`台北市`=list(list(`最高溫`=25),list(`最低溫`=18))
+`新北市`=list(list(`最高溫`=24),list(`最低溫`=15))
+`縣市`<-list(`台北市`,`新北市`)
+`日期`<-list(`2020-03-31`=list(`縣市`),`2020-04-01`=list(`縣市`))
+`台灣氣象預報`<-list(`日期`)
+
+print(`台灣氣象預報`)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Including Plots
 
