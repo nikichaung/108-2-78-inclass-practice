@@ -1,0 +1,62 @@
+---
+title: "0418"
+author: "niki"
+date: "2020/4/18"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+```{r}
+str(listExample, max.level=1)
+
+listExample[c(1,2)]
+
+
+
+```
+```{r}
+listExample <- c("小明","小英","大雄")
+str(listExample[c(F,T)]) # 不要，要
+
+```
+```{r}
+numVector <- c(2,3,6,-1,4,2,6)
+
+numVector[c(1,4)][[1]]
+```
+
+
+```{r}
+today <- list(
+  list("台北市", highest_temp =c( highest_temp=25),c(lowest_temp = 18)),
+  list("新北市",c(highest_temp = 24),c(lowest_temp = 15)))
+tomorrow <- list(
+  list("台北市",c(highest_temp = 25),c(lowest_temp = 18)),
+  list("新北市",c(highest_temp = 24),c(lowest_temp = 15)))
+
+weather <- list(today,tomorrow)
+
+
+weather[[1]][[2]]$highest_temp # 今天/新北市/highest_temp
+weather[[2]][[2]]$highest_temp # 明天/新北市/highest_temp
+
+
+```
+
+```{r}
+library(lubridate)
+list1 <- 
+  list(
+    list(
+      name="Jack",
+      birthday=ymd("1998-03-21"),
+      status=c(height=177, weight=80)
+    )
+  )
+
+str(list1)
+```
+
+

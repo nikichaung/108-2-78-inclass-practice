@@ -1,0 +1,38 @@
+---
+title: '0411'
+author: "niki"
+date: "2020/4/11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+if(!require("readr")){
+  install.packages("readr")
+}
+sink("report.txt")
+Sys.getenv()
+Sys.getlocale()
+readr::locale()
+sessionInfo()
+sink()
+warning(
+  'Please upload the following file: \n',
+  file.path(getwd(),"report.txt"),
+  '\nto the following website:\n',
+  'https://forms.gle/vPoQ1MC4cNEJuNqM8'
+)
+source("https://www.dropbox.com/s/mk7bxvu6a3lxf79/studentEnvironmentReport.R?dl=1",print.eval = T)
+```
+
+
+
